@@ -121,6 +121,7 @@ resource "azurerm_virtual_machine" "catapp" {
   storage_os_disk {
     name              = "${var.prefix}-osdisk"
     managed_disk_type = "Standard_LRS"
+
     caching           = "ReadWrite"
     create_option     = "FromImage"
   }
@@ -137,6 +138,7 @@ resource "azurerm_virtual_machine" "catapp" {
 
   tags = {
     Department = "devops"
+    Billable = "true"
   }
 
   # Added to allow destroy to work correctly.
