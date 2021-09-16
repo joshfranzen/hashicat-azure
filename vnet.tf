@@ -1,6 +1,6 @@
-module "vnet" {
-  source  = "app.terraform.io/jfranzen-training/vnet/azurerm"
-  version = "2.5.1"
+module "network" {
+  source  = "app.terraform.io/jfranzen-training/network/azurerm"
+  version = "3.5.0"
   # insert required variables here
   resource_group_name = azurerm_resource_group.myresourcegroup.name
 }
